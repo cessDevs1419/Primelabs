@@ -88,7 +88,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("services");
                             }}
-                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
+                            className="nav-link-white text-white font-sans fw-semibold px-2 py-1"
                         >
                             Services
                         </Nav.Link>
@@ -98,7 +98,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("blueprints");
                             }}
-                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
+                            className="nav-link-white text-white font-sans fw-semibold px-2 py-1"
                         >
                             AI Engine
                         </Nav.Link>
@@ -108,7 +108,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("projects");
                             }}
-                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
+                            className="nav-link-white text-white font-sans fw-semibold px-2 py-1"
                         >
                             Case Studies
                         </Nav.Link>
@@ -118,7 +118,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("calculator");
                             }}
-                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
+                            className="nav-link-white text-white font-sans fw-semibold px-2 py-1"
                         >
                             Scope Estimator
                         </Nav.Link>
@@ -128,7 +128,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("about");
                             }}
-                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
+                            className="nav-link-white text-white font-sans fw-semibold px-2 py-1"
                         >
                             About
                         </Nav.Link>

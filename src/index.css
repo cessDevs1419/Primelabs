@@ -150,6 +150,30 @@ body::before {
     border-bottom: 1px solid var(--border-subtle);
 }
 
+/* Pure White Navbar Links */
+.navbar .nav-link,
+.navbar-nav .nav-link,
+.nav-link-white {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    transition: color 0.2s ease, text-shadow 0.2s ease !important;
+    opacity: 0.95;
+}
+
+.navbar .nav-link:hover,
+.navbar-nav .nav-link:hover,
+.nav-link-white:hover {
+    color: #38bdf8 !important;
+    text-shadow: 0 0 14px rgba(56, 189, 248, 0.7) !important;
+    opacity: 1;
+}
+
+.navbar .nav-link:focus,
+.navbar-nav .nav-link:focus {
+    color: #ffffff !important;
+}
+
 /* PrimeLabs Buttons */
 .btn-prime {
     background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%) !important;
