@@ -30,9 +30,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://lappee.com/",
         images: [lappee, lappeeDash],
         metrics: [
-            { label: "Operational Speed", value: "+320%" },
-            { label: "Data Latency", value: "<120ms" },
-            { label: "Automated Routines", value: "45+" },
+            { label: "Deployment", value: "Enterprise Grade" },
+            { label: "Data Latency", value: "Sub-Second" },
+            { label: "Routines", value: "Autonomous" },
         ],
         challenge:
             "Managing scattered administrative workflows across thousands of daily transactions with legacy manual reconciliations.",
@@ -57,9 +57,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://cryogames.com/",
         images: [cryo, apex],
         metrics: [
-            { label: "Delivery Automation", value: "100%" },
-            { label: "Fulfillment Speed", value: "<3s" },
-            { label: "Manual Overhead", value: "-90%" },
+            { label: "Fulfillment", value: "Instant Auto" },
+            { label: "Pipeline", value: "Event-Driven" },
+            { label: "Manual Delay", value: "Eliminated" },
         ],
         challenge:
             "High order volumes resulting in customer ticket backlogs and manual license key dispatch delays.",
@@ -86,9 +86,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://lightbulb.ph/",
         images: [ltb],
         metrics: [
-            { label: "Lighthouse Score", value: "98/100" },
-            { label: "Conversion Lift", value: "+44%" },
-            { label: "Load Time", value: "0.8s" },
+            { label: "Speed Standard", value: "Sub-Second" },
+            { label: "User Interface", value: "High Contrast" },
+            { label: "Architecture", value: "Conversion First" },
         ],
         challenge:
             "Outdated web performance causing visitor drop-offs and poor brand positioning for enterprise clientele.",
@@ -113,9 +113,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://teamcocreate.com/",
         images: [cocreate],
         metrics: [
-            { label: "Engagement Time", value: "+210%" },
-            { label: "Mobile Usability", value: "100%" },
-            { label: "Client Retainers", value: "+65%" },
+            { label: "Usability", value: "Mobile First" },
+            { label: "Interaction", value: "Fluid Micro-UX" },
+            { label: "Engagement", value: "Optimized" },
         ],
         challenge:
             "Presenting multi-disciplinary agency services without overwhelming prospective clients.",
@@ -142,9 +142,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://www.brnddeals.com/",
         images: [brnd],
         metrics: [
-            { label: "Checkout Conversion", value: "+38%" },
-            { label: "Cart Abandonment", value: "-22%" },
-            { label: "Average Order Value", value: "+18%" },
+            { label: "Checkout Engine", value: "1-Click Accelerated" },
+            { label: "Cart Tech", value: "AJAX Drawer" },
+            { label: "Inventory", value: "Live Dynamic" },
         ],
         challenge:
             "High traffic spikes during liquidation drops caused cart friction and slowed down checkout velocity.",
@@ -169,9 +169,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://majesticprintpackaging.com/",
         images: [majestic],
         metrics: [
-            { label: "B2B Inquiries", value: "+180%" },
-            { label: "SEO Keyword Rankings", value: "Top 3" },
-            { label: "Form Completion Rate", value: "88%" },
+            { label: "Catalog Engine", value: "Dynamic Specs" },
+            { label: "Lead Pipeline", value: "Auto-Routed" },
+            { label: "Search Index", value: "SEO Dominant" },
         ],
         challenge:
             "Industrial clients required customized specs (dimensions, materials, volume discounts) before requesting quotes.",
@@ -198,9 +198,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://sp.quezon.gov.ph/",
         images: [qplis],
         metrics: [
-            { label: "Public Records Indexed", value: "10,000+" },
-            { label: "Search Latency", value: "<80ms" },
-            { label: "Accessibility Level", value: "WCAG AA" },
+            { label: "Records Hub", value: "10,000+ Indexed" },
+            { label: "Search Engine", value: "Instant Query" },
+            { label: "Accessibility", value: "WCAG AA Standard" },
         ],
         challenge:
             "Citizen difficulty searching through thousands of PDF ordinances and legislative resolutions spanning years.",
@@ -225,9 +225,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "https://datonhaywood.com/",
         images: [daton],
         metrics: [
-            { label: "Consultation Bookings", value: "+300%" },
-            { label: "Bounce Rate", value: "28%" },
-            { label: "PageSpeed Index", value: "99" },
+            { label: "Booking System", value: "Automated Calendar" },
+            { label: "Brand Tier", value: "Executive Luxury" },
+            { label: "Render Velocity", value: "Instantaneous" },
         ],
         challenge:
             "Translating executive credentials into high-ticket enterprise client conversions.",
@@ -252,9 +252,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "",
         images: [maharlika, gsi, marci],
         metrics: [
-            { label: "Security Compliance", value: "100%" },
-            { label: "Uptime Reliability", value: "99.99%" },
-            { label: "Global Load Time", value: "<1.1s" },
+            { label: "Security Profile", value: "Enterprise Grade" },
+            { label: "Global Edge", value: "CDN Accelerated" },
+            { label: "Uptime Protocol", value: "Zero Downtime" },
         ],
         challenge:
             "Establishing international credibility with strict security and high multi-region reliability.",
@@ -279,9 +279,9 @@ export const ProjectsData: ProjectItem[] = [
         link: "",
         images: [riot, swyper],
         metrics: [
-            { label: "Automated Deliveries", value: "5,000+" },
-            { label: "Dispute Rate", value: "<0.1%" },
-            { label: "Real-time Sync", value: "Live" },
+            { label: "Fulfillment SLA", value: "Real-Time Push" },
+            { label: "Security Verification", value: "Token Cryptography" },
+            { label: "Architecture", value: "High Concurrency" },
         ],
         challenge:
             "Mitigating fraudulent payment attempts while delivering digital assets within seconds of confirmation.",

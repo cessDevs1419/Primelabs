@@ -17,15 +17,15 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="d-flex justify-content-between align-items-start gap-3 mb-4 pb-3 border-bottom border-white border-opacity-10">
+                <div className="d-flex justify-content-between align-items-start gap-3 mb-4 pb-3 border-bottom border-primary border-opacity-30">
                     <div>
-                        <span className="badge bg-cyan-500 bg-opacity-20 text-cyan-400 font-mono small mb-2 d-inline-block">
+                        <span className="badge bg-primary bg-opacity-20 text-cyan-300 font-mono small mb-2 d-inline-block border border-primary border-opacity-40">
                             {project.categoryLabel}
                         </span>
-                        <h2 className="font-display h3 text-white m-0">
+                        <h2 className="font-display h3 text-white m-0 fw-bold">
                             {project.name}
                         </h2>
-                        <p className="text-muted small m-0 mt-1">
+                        <p className="small m-0 mt-1" style={{ color: "#cbd5e1" }}>
                             {project.tagline}
                         </p>
                     </div>
@@ -39,7 +39,7 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
                     </button>
                 </div>
 
-                {/* Screenshots Carousel / Grid */}
+                {/* Screenshots */}
                 <div className="mb-4">
                     <div className="d-flex flex-column gap-3">
                         {project.images.map((imgSrc, idx) => (
@@ -47,23 +47,23 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
                                 key={idx}
                                 src={imgSrc}
                                 alt={`${project.name} preview ${idx + 1}`}
-                                className="w-100 rounded-3 border border-white border-opacity-10"
+                                className="w-100 rounded-3 border border-primary border-opacity-30"
                                 style={{ maxHeight: "400px", objectFit: "cover" }}
                             />
                         ))}
                     </div>
                 </div>
 
-                {/* Key Metrics Grid */}
+                {/* Verified Deliverables Grid */}
                 {project.metrics && project.metrics.length > 0 && (
                     <div className="row g-3 mb-4">
                         {project.metrics.map((m, idx) => (
                             <div key={idx} className="col-4">
-                                <div className="p-3 rounded-2 text-center" style={{ background: "rgba(0, 242, 254, 0.08)", border: "1px solid rgba(0, 242, 254, 0.2)" }}>
-                                    <span className="h4 text-cyan-400 font-mono fw-bold d-block m-0">
+                                <div className="p-3 rounded-2 text-center" style={{ background: "rgba(16, 36, 80, 0.7)", border: "1px solid rgba(56, 189, 248, 0.3)" }}>
+                                    <span className="h5 text-cyan-300 font-mono fw-bold d-block m-0">
                                         {m.value}
                                     </span>
-                                    <span className="text-muted small font-sans" style={{ fontSize: "0.75rem" }}>
+                                    <span className="text-muted small font-sans" style={{ fontSize: "0.78rem" }}>
                                         {m.label}
                                     </span>
                                 </div>
@@ -76,11 +76,11 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
                 <div className="row g-4 mb-4">
                     {project.challenge && (
                         <div className="col-md-6">
-                            <div className="p-3 rounded-3 h-100 bg-black bg-opacity-30 border border-white border-opacity-10">
-                                <h6 className="text-danger font-mono small text-uppercase mb-2">
-                                    The Bottleneck
+                            <div className="p-3 rounded-3 h-100 border border-primary border-opacity-20" style={{ background: "rgba(10, 20, 48, 0.7)" }}>
+                                <h6 className="text-cyan-400 font-mono small text-uppercase mb-2 fw-bold">
+                                    Operational Bottleneck
                                 </h6>
-                                <p className="text-muted small m-0">
+                                <p className="small m-0" style={{ color: "#cbd5e1" }}>
                                     {project.challenge}
                                 </p>
                             </div>
@@ -88,11 +88,11 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
                     )}
                     {project.solution && (
                         <div className="col-md-6">
-                            <div className="p-3 rounded-3 h-100 bg-black bg-opacity-30 border border-white border-opacity-10">
-                                <h6 className="text-emerald-400 font-mono small text-uppercase mb-2">
+                            <div className="p-3 rounded-3 h-100 border border-primary border-opacity-20" style={{ background: "rgba(10, 20, 48, 0.7)" }}>
+                                <h6 className="text-emerald-400 font-mono small text-uppercase mb-2 fw-bold">
                                     PrimeLabs Engineering Solution
                                 </h6>
-                                <p className="text-light small m-0">
+                                <p className="small m-0" style={{ color: "#f1f5f9" }}>
                                     {project.solution}
                                 </p>
                             </div>
@@ -102,14 +102,14 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
 
                 {/* Architecture Highlights */}
                 {project.architecture && project.architecture.length > 0 && (
-                    <div className="mb-4 p-3 rounded-3 bg-surface-elevated border border-white border-opacity-10">
+                    <div className="mb-4 p-3 rounded-3 border border-primary border-opacity-30" style={{ background: "rgba(14, 28, 64, 0.8)" }}>
                         <div className="d-flex align-items-center gap-2 mb-3 text-cyan-300 font-mono small">
                             <Layers size={16} />
-                            <span className="fw-bold">SYSTEM ARCHITECTURE BREAKDOWN</span>
+                            <span className="fw-bold">SYSTEM ARCHITECTURE SPECIFICATION</span>
                         </div>
                         <ul className="list-unstyled mb-0 d-flex flex-column gap-2">
                             {project.architecture.map((item, idx) => (
-                                <li key={idx} className="d-flex align-items-start gap-2 small text-slate-300">
+                                <li key={idx} className="d-flex align-items-start gap-2 small text-slate-200">
                                     <CheckCircle2 size={16} className="text-cyan-400 mt-1 flex-shrink-0" />
                                     <span>{item}</span>
                                 </li>
@@ -132,7 +132,7 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
                 </div>
 
                 {/* Action Footer */}
-                <div className="d-flex justify-content-between align-items-center pt-3 border-top border-white border-opacity-10">
+                <div className="d-flex justify-content-between align-items-center pt-3 border-top border-primary border-opacity-30">
                     <button onClick={onClose} className="btn btn-secondary-glow">
                         Close Overview
                     </button>
@@ -147,8 +147,8 @@ export const CaseStudyModal: React.FC<Props> = ({ project, onClose }) => {
                             <ExternalLink size={16} />
                         </a>
                     ) : (
-                        <span className="badge bg-secondary bg-opacity-25 text-muted font-mono small">
-                            Enterprise Internal Platform
+                        <span className="badge font-mono small text-slate-300" style={{ background: "rgba(16, 32, 70, 0.8)", border: "1px solid rgba(70, 130, 230, 0.3)" }}>
+                            Enterprise Platform
                         </span>
                     )}
                 </div>

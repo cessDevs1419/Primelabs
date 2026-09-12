@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/images/FC.png";
+import logo from "../../assets/images/primelabs_logo_transparent.png";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { ArrowRight, Menu, X } from "lucide-react";
 
@@ -38,30 +38,28 @@ export const Navigationbar: React.FC = () => {
             style={{ transition: "all 0.3s ease" }}
         >
             <Container className="d-flex align-items-center justify-content-between">
-                {/* Brand Logo */}
+                {/* Brand Logo & Name */}
                 <Navbar.Brand
                     href="#hero"
                     onClick={(e) => {
                         e.preventDefault();
                         handleNavClick("hero");
                     }}
-                    className="d-flex align-items-center gap-2 text-decoration-none m-0 p-0"
+                    className="d-flex align-items-center gap-2 text-decoration-none m-0 p-0 cursor-pointer"
                 >
-                    <div className="position-relative d-flex align-items-center justify-content-center">
+                    <div className="position-relative d-flex align-items-center justify-content-center p-1 rounded-2" style={{ background: "rgba(10, 24, 60, 0.7)", border: "1px solid rgba(56, 189, 248, 0.3)" }}>
                         <img
                             src={logo}
-                            alt="PrimeLabs"
-                            className="rounded-circle border border-cyan-400 border-opacity-50"
-                            style={{ width: "38px", height: "38px", objectFit: "cover" }}
+                            alt="PrimeLabs Logo"
+                            style={{ width: "32px", height: "32px", objectFit: "contain" }}
                         />
-                        <span className="position-absolute bottom-0 end-0 p-1 bg-emerald-500 rounded-circle border border-black" style={{ width: "10px", height: "10px", backgroundColor: "#10b981" }}></span>
                     </div>
                     <div>
                         <div className="d-flex align-items-center gap-1">
                             <span className="font-display fw-bold text-white fs-5 tracking-tight">Prime<span className="text-gradient">Labs</span></span>
                         </div>
-                        <span className="d-none d-sm-block font-mono text-muted text-uppercase" style={{ fontSize: "0.65rem", letterSpacing: "0.08em" }}>
-                            Frontend & AI Architecture
+                        <span className="d-none d-sm-block font-mono text-muted text-uppercase" style={{ fontSize: "0.68rem", letterSpacing: "0.08em", color: "#94a3b8" }}>
+                            Digital Solutions & AI
                         </span>
                     </div>
                 </Navbar.Brand>
@@ -69,7 +67,7 @@ export const Navigationbar: React.FC = () => {
                 {/* Status Indicator (Desktop) */}
                 <div className="d-none d-xl-flex align-items-center status-pill">
                     <span className="pulse-dot"></span>
-                    <span style={{ fontSize: "0.78rem" }}>Available for Q1/Q2 Builds & AI Workflows</span>
+                    <span style={{ fontSize: "0.8rem", color: "#bae6fd" }}>Available for Q1/Q2 Builds & AI Workflows</span>
                 </div>
 
                 {/* Hamburger Toggle */}
@@ -90,7 +88,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("services");
                             }}
-                            className="text-slate-300 hover:text-cyan-400 font-sans fw-medium px-2 py-1"
+                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
                         >
                             Services
                         </Nav.Link>
@@ -100,7 +98,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("blueprints");
                             }}
-                            className="text-slate-300 hover:text-cyan-400 font-sans fw-medium px-2 py-1"
+                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
                         >
                             AI Engine
                         </Nav.Link>
@@ -110,7 +108,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("projects");
                             }}
-                            className="text-slate-300 hover:text-cyan-400 font-sans fw-medium px-2 py-1"
+                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
                         >
                             Case Studies
                         </Nav.Link>
@@ -120,7 +118,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("calculator");
                             }}
-                            className="text-slate-300 hover:text-cyan-400 font-sans fw-medium px-2 py-1"
+                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
                         >
                             Scope Estimator
                         </Nav.Link>
@@ -130,7 +128,7 @@ export const Navigationbar: React.FC = () => {
                                 e.preventDefault();
                                 handleNavClick("about");
                             }}
-                            className="text-slate-300 hover:text-cyan-400 font-sans fw-medium px-2 py-1"
+                            className="text-slate-200 hover:text-cyan-300 font-sans fw-semibold px-2 py-1"
                         >
                             About
                         </Nav.Link>

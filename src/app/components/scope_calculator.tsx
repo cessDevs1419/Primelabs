@@ -79,17 +79,17 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
     };
 
     return (
-        <div id="calculator" className="glass-panel p-4 p-md-5 my-5 border border-cyan-500/20 glow-card-cyan">
+        <div id="calculator" className="glass-panel p-4 p-md-5 my-5 border border-primary border-opacity-30 glow-card-cyan">
             {/* Header */}
             <div className="text-center max-w-2xl mx-auto mb-5">
                 <div className="d-inline-flex align-items-center gap-2 status-pill mb-2">
-                    <Calculator size={14} className="text-cyan-400" />
+                    <Calculator size={14} className="text-cyan-300" />
                     <span>Instant Scope & Architecture Planner</span>
                 </div>
-                <h2 className="font-display display-6 text-white mb-2">
+                <h2 className="font-display display-6 text-white mb-2 fw-bold">
                     Calculate Your <span className="text-gradient">Project Architecture</span>
                 </h2>
-                <p className="text-muted m-0">
+                <p className="m-0" style={{ color: "#cbd5e1" }}>
                     Customize your digital build parameters to view engineering milestones, delivery timeframes, and request an executive proposal.
                 </p>
             </div>
@@ -97,10 +97,10 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
             <div className="row g-4 align-items-stretch">
                 {/* Configuration Controls */}
                 <div className="col-lg-7">
-                    <div className="bg-surface-elevated p-4 rounded-3 h-100 border border-white border-opacity-10" style={{ background: "rgba(10, 15, 28, 0.85)" }}>
+                    <div className="p-4 rounded-3 h-100 border border-primary border-opacity-30" style={{ background: "rgba(10, 22, 54, 0.88)" }}>
                         {/* Step 1: Project Archetype */}
                         <div className="mb-4">
-                            <label className="text-white font-mono small text-uppercase mb-2 d-block">
+                            <label className="font-mono small text-uppercase mb-2 d-block fw-bold text-cyan-300">
                                 1. Select Project Archetype
                             </label>
                             <div className="d-flex flex-column gap-2">
@@ -116,13 +116,13 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
                                         onClick={() => setProjectType(type)}
                                         className={`btn text-start p-3 rounded-2 d-flex align-items-center justify-content-between transition-all ${
                                             projectType === type
-                                                ? "btn-prime"
+                                                ? "btn-prime text-white"
                                                 : "btn-secondary-glow"
                                         }`}
                                         style={{ fontSize: "0.92rem" }}
                                     >
                                         <span className="fw-semibold">{type}</span>
-                                        {projectType === type && <CheckCircle size={18} className="text-dark" />}
+                                        {projectType === type && <CheckCircle size={18} className="text-white" />}
                                     </button>
                                 ))}
                             </div>
@@ -130,7 +130,7 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
 
                         {/* Step 2: Advanced Feature Modules */}
                         <div className="mb-4">
-                            <label className="text-white font-mono small text-uppercase mb-2 d-block">
+                            <label className="font-mono small text-uppercase mb-2 d-block fw-bold text-cyan-300">
                                 2. Add Architecture Modules
                             </label>
                             <div className="row g-2">
@@ -142,10 +142,15 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
                                                 onClick={() => toggleFeature(feat.id)}
                                                 className={`p-2 px-3 rounded-2 cursor-pointer border transition-all d-flex align-items-center gap-2 ${
                                                     isSelected
-                                                        ? "bg-cyan-500 bg-opacity-15 border-cyan-400 text-white"
-                                                        : "bg-black bg-opacity-30 border-white border-opacity-10 text-muted"
+                                                        ? "text-white"
+                                                        : "text-slate-300"
                                                 }`}
-                                                style={{ cursor: "pointer", fontSize: "0.85rem" }}
+                                                style={{
+                                                    cursor: "pointer",
+                                                    fontSize: "0.85rem",
+                                                    background: isSelected ? "rgba(37, 99, 235, 0.35)" : "rgba(6, 14, 38, 0.8)",
+                                                    borderColor: isSelected ? "rgba(56, 189, 248, 0.6)" : "rgba(70, 120, 220, 0.25)"
+                                                }}
                                             >
                                                 <input
                                                     type="checkbox"
@@ -153,7 +158,7 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
                                                     onChange={() => {}}
                                                     className="form-check-input mt-0"
                                                 />
-                                                <span>{feat.label}</span>
+                                                <span className="fw-medium">{feat.label}</span>
                                             </div>
                                         </div>
                                     );
@@ -163,7 +168,7 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
 
                         {/* Step 3: Delivery Urgency */}
                         <div>
-                            <label className="text-white font-mono small text-uppercase mb-2 d-block">
+                            <label className="font-mono small text-uppercase mb-2 d-block fw-bold text-cyan-300">
                                 3. Timeline Preference
                             </label>
                             <div className="d-flex flex-wrap gap-2">
@@ -192,25 +197,27 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
 
                 {/* Live Output Summary Box */}
                 <div className="col-lg-5">
-                    <div className="glass-panel p-4 h-100 d-flex flex-column justify-content-between border border-cyan-500/30" style={{ background: "rgba(14, 22, 40, 0.95)" }}>
+                    <div className="glass-panel p-4 h-100 d-flex flex-column justify-content-between border border-primary border-opacity-40" style={{ background: "rgba(12, 25, 60, 0.95)" }}>
                         <div>
-                            <div className="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom border-white border-opacity-10">
-                                <span className="font-mono text-cyan-400 small text-uppercase">Architecture Brief</span>
-                                <span className="badge bg-cyan-500 bg-opacity-20 text-cyan-300 font-mono">PrimeLabs Verified</span>
+                            <div className="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom border-primary border-opacity-30">
+                                <span className="font-mono text-cyan-300 small text-uppercase fw-bold">Architecture Brief</span>
+                                <span className="badge font-mono text-cyan-300" style={{ background: "rgba(37, 99, 235, 0.4)", border: "1px solid rgba(56, 189, 248, 0.3)" }}>
+                                    PrimeLabs Verified
+                                </span>
                             </div>
 
                             <div className="mb-3">
-                                <span className="text-muted small d-block">Configured Base:</span>
+                                <span className="small d-block text-cyan-300 font-mono">Configured Base:</span>
                                 <span className="text-white fw-bold">{projectType}</span>
                             </div>
 
                             <div className="mb-4">
-                                <span className="text-muted small d-block mb-1">Active Modules ({selectedFeatures.length}):</span>
+                                <span className="small d-block mb-1 text-cyan-300 font-mono">Active Modules ({selectedFeatures.length}):</span>
                                 <div className="d-flex flex-wrap gap-1">
                                     {selectedFeatures.map((id) => {
                                         const feat = FEATURES_LIST.find((f) => f.id === id);
                                         return (
-                                            <span key={id} className="badge bg-secondary bg-opacity-25 text-slate-200 border border-white border-opacity-10 small">
+                                            <span key={id} className="badge text-white small" style={{ background: "rgba(37, 99, 235, 0.3)", border: "1px solid rgba(70, 130, 230, 0.3)" }}>
                                                 {feat?.label}
                                             </span>
                                         );
@@ -219,27 +226,27 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
                             </div>
 
                             {/* Estimated Metrics */}
-                            <div className="p-3 rounded-2 bg-black bg-opacity-40 border border-white border-opacity-10 mb-4">
+                            <div className="p-3 rounded-2 border border-primary border-opacity-30 mb-4" style={{ background: "rgba(6, 14, 38, 0.85)" }}>
                                 <div className="d-flex align-items-center justify-content-between mb-2">
-                                    <span className="text-muted small d-flex align-items-center gap-1">
+                                    <span className="small d-flex align-items-center gap-1 text-slate-300">
                                         <Clock size={14} className="text-cyan-400" />
                                         Est. Delivery Sprint:
                                     </span>
-                                    <span className="text-cyan-400 fw-bold font-mono">{calculatedScope.estDuration}</span>
+                                    <span className="text-cyan-300 fw-bold font-mono">{calculatedScope.estDuration}</span>
                                 </div>
                                 <div className="d-flex align-items-center justify-content-between mb-2">
-                                    <span className="text-muted small d-flex align-items-center gap-1">
+                                    <span className="small d-flex align-items-center gap-1 text-slate-300">
                                         <Zap size={14} className="text-cyan-400" />
                                         Engineered Deliverables:
                                     </span>
                                     <span className="text-white fw-bold">{calculatedScope.deliverablesCount} Core Assets</span>
                                 </div>
                                 <div className="d-flex align-items-center justify-content-between">
-                                    <span className="text-muted small d-flex align-items-center gap-1">
+                                    <span className="small d-flex align-items-center gap-1 text-slate-300">
                                         <ShieldCheck size={14} className="text-emerald-400" />
                                         Warranty & SLA:
                                     </span>
-                                    <span className="text-emerald-400 small fw-semibold">100% Guaranteed</span>
+                                    <span className="text-emerald-400 small fw-bold">30 Days Included</span>
                                 </div>
                             </div>
                         </div>
@@ -252,8 +259,8 @@ export const ScopeCalculator: React.FC<Props> = ({ onRequestQuote }) => {
                                 <Send size={18} />
                                 <span>Request Formal Architecture Proposal</span>
                             </button>
-                            <p className="text-center text-muted font-mono small m-0 mt-2">
-                                ⚡ Instant response within 12-24 hours.
+                            <p className="text-center font-mono small m-0 mt-2" style={{ color: "#94a3b8" }}>
+                                ⚡ Direct response within 12-24 hours.
                             </p>
                         </div>
                     </div>
